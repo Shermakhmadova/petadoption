@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>/* Basic styling */
+
+        /* Header */
+        header {
+            /* Styles for header */
+        }
+        
+        /* Main content */
+        main {
+            padding: 20px;
+        }
+        .custom-link{
+            text-decoration: none;
+        }
+        .pet-details {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .pet-image img {
+            max-width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pet-info {
+            margin-left: 20px;
+            color: #333;
+        }
+        
+        .pet-info h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #009579;
+        }
+        
+        .pet-info p {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .pet-info button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #009579;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .pet-info button:hover {
+            background-color: #006653;
+        }
+        
+        /* Footer */
+        footer {
+            /* Styles for footer */
+        }
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-left">
+            <!-- Profile icon -->
+            <a href="profile.html"><img src="img/avatar.png" alt="Profile" height="30px"></a>
+        </div>
+        <div class="top-right">
+            <!-- Login/Sign up or User Profile icon -->
+            <a href="login.html" class="custom-link">Log In / Sign Up</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="logo">
+            <!-- PetHouse logo/title -->
+            <h1><a href="index.html" style="text-decoration: none; color:#009579;">Welcome to PetHouse!</a></h1>
+        </div>
+        <div class="search-bar">
+            <!-- Search bar -->
+            <input type="text" placeholder="Search for pets...">
+        </div>
+    </nav>
+
+    <main>
+        <section class="pet-details">
+            <div class="pet-image">
+                <img src="img/dog.jpg" alt="Pet Name">
+            </div>
+            <div class="pet-info">
+                <h1>Pet Name</h1>
+                <p>Breed: Breed Type</p>
+                <p>Age: Age</p>
+                <p>Gender: Gender</p>
+                <p>Temperament: Temperament Description</p>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <button>Adopt Me</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <a href="contacts.html">Contacts</a>
+            <a href="address.html">Address</a>
+            <span>Phone: 123-456-7890</span>
+        </div>
+        <div class="disclaimer">
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

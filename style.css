@@ -1,0 +1,114 @@
+/* Basic styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #7AB730;
+    --secondary: #FFD33C;
+    --light: #F3F3F3;
+    --dark: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: #000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #009579;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(236, 208, 176, 0.5);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none;
+    transition: .5s;
+   
+}
+.search-bar input[type="text"]{
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 5px; /* Adds space between the input and the button */
+  width: 500px;
+  text-align: center;
+}
+
+/* Main content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.pet-categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.user-categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.admin-details {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
