@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <header>
+        <div class="top-left">
+            <!-- Profile icon -->
+            <a href="profile.html"><img src="img/avatar.png" alt="Profile" height="30px"></a>
+        </div>
+        <div class="top-right">
+            <!-- Login/Sign up or User Profile icon -->
+            <a href="index.html" class="home">Home</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="logo">
+            <!-- PetHouse logo/title -->
+            <h1><a href="index.html" style="text-decoration: none; color:#009579;">PET HOUSE!</a></h1>
+        </div>
+    </nav>
+    <main>
+  <div class="container" style="align-items: center;">
+    <h1>Pet Purchase Transaction</h1>
+    <div id="petInfo">
+    <div id="cardSelection">
+      <h2>Payment Options</h2>
+      <div id="cardOptions">
+        <div class="card">
+          <p>Card ending in 1234</p>
+          <button class="btn" onclick="completePurchase('1234')">Use this card</button>
+        </div>
+        <div class="card">
+          <p>Card ending in 5678</p>
+          <button class="btn" onclick="completePurchase('5678')">Use this card</button>
+        </div>
+        <div class="card">
+          <p>No card? Enter details</p>
+          <button class="btn"  onclick="showCardForm()">Enter card details</button>
+        </div>
+      </div>
+      <div id="cardForm" style="display: none;">
+        <h3>Enter Card Details</h3>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" placeholder="Card Number" required>
+        <label for="cardName">Card Name:</label>
+        <input type="text" id="cardName" placeholder="Cardholder Name" required>
+        <button class="btn" onclick="saveCardDetails()">Save Card</button>
+      </div>
+    </div>
+  </div>
+</main>
+  <footer>
+    <div class="disclaimer">
+        <p>&copy All rights reserved</p>
+    </div>
+</footer>
+</body>
+</html>
