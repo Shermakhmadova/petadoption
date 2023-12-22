@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>PetAdoption - Main Page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         </div>
         <div class="top-right">
             <!-- Login/Sign up or User Profile icon -->
-            <a href="login.html" class="custom-link">Log In / Sign Up</a>
+            <a href="login.html" class="custom-link">Log out</a>
         </div>
     </header>
 
@@ -26,7 +27,8 @@
         </div>
         <div class="search-bar">
             <!-- Search bar -->
-            <input type="text" placeholder="Search for pets...">
+            <input onclick="searchPets()" type="text" placeholder="Search for pets...">
+            
         </div>
     </nav>
 
@@ -35,26 +37,29 @@
             <!-- Display pet categories and details -->
             <!-- Example category -->
             <div class="category">
+                <div class="pet-item">
                 <img src="img/dog.jpg" alt="Dog" height="180px", width="260px">
-                <h2>Golden Retriever</h2>
+                
+                <h2 class="pet-name">Golden Retriever</h2></div>
+                <p>Age: 2 years | Gender: Male | Friendly</p>
+                <a href="details.html" class="custom-link">View Details</a>
+            </div></div>
+            <div class="category">
+
+                <img src="img/dog.jpg" alt="Dog" height="180px", width="260px">
+                <h2 class="pet-name">Golden Retriever</h2>
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px", width="260px">
-                <h2>Golden Retriever</h2>
+                <h2 class="pet-name">Golden Retriever</h2>
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px", width="260px">
-                <h2>Golden Retriever</h2>
-                <p>Age: 2 years | Gender: Male | Friendly</p>
-                <a href="details.html" class="custom-link">View Details</a>
-            </div>
-            <div class="category">
-                <img src="img/dog.jpg" alt="Dog" height="180px", width="260px">
-                <h2>Golden Retriever</h2>
+                <h2 class="pet-name">Golden Retriever</h2>
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
@@ -63,25 +68,25 @@
         <section class="pet-categories">
             <div class="category">
                 <img src="img/bird.jpg" alt="Bird" height="180px">
-                <h2>Pelican</h2>
+                <h2 class="pet-name">Pelican</h2>
                 <p>Age: 1 years | Gender: Male | Playful</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/bird.jpg" alt="Bird" height="180px">
-                <h2>Pelican</h2>
+                <h2 class="pet-name">Pelican</h2>
                 <p>Age: 1 years | Gender: Male | Playful</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/bird.jpg" alt="Bird" height="180px">
-                <h2>Pelican</h2>
+                <h2 class="pet-name">Pelican</h2>
                 <p>Age: 1 years | Gender: Male | Playful</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/bird.jpg" alt="Bird" height="180px">
-                <h2>Pelican</h2>
+                <h2 class="pet-name">Pelican</h2>
                 <p>Age: 1 years | Gender: Male | Playful</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
@@ -89,25 +94,25 @@
         <section class="pet-categories">
             <div class="category">
                 <img src="img/cat.jpg" alt="Cat" height="180px", width="260px">
-                <h2>Felix</h2>
+                <h2 class="pet-name">Felix</h2>
                 <p>Age: 2 years | Gender: Female | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/cat.jpg" alt="Cat" height="180px", width="260px">
-                <h2>Felix</h2>
+                <h2 class="pet-name">Felix</h2>
                 <p>Age: 2 years | Gender: Female | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/cat.jpg" alt="Cat" height="180px", width="260px">
-                <h2>Felix</h2>
+                <h2 class="pet-name">Felix</h2>
                 <p>Age: 2 years | Gender: Female | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
             <div class="category">
                 <img src="img/cat.jpg" alt="Cat" height="180px", width="260px">
-                <h2>Felix</h2>
+                <h2 class="pet-name">Felix</h2>
                 <p>Age: 2 years | Gender: Female | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
             </div>
@@ -115,13 +120,8 @@
     </main>
 
     <footer>
-        <div class="footer-menu">
-            <a href="contacts.html" class="custom-link">Contacts</a>
-            <a href="address.html" class="custom-link">Address</a>
-            <span>Phone: 123-456-7890</span>
-        </div>
         <div class="disclaimer">
-            <p>All rights reserved</p>
+            <p>&copy All rights reserved</p>
         </div>
     </footer>
 </body>
