@@ -64,7 +64,7 @@ body{
 .form a:hover{
   text-decoration: underline;
 }
-.form input.button{
+.form input.loginbutton {
   color: #fff;
   background: #009579;
   font-size: 1.2rem;
@@ -74,7 +74,21 @@ body{
   cursor: pointer;
   transition: 0.4s;
 }
-.form input.button:hover{
+
+.form input.signupbutton{
+  color: #fff;
+  background: #009579;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.loginbutton {
+  background: #006653;
+}
+.form input.signupbutton{
   background: #006653;
 }
 .signup{
