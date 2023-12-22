@@ -5,20 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login & Registration Form</title>
-  <!---Custom CSS File--->
   <link rel="stylesheet" href="login_style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <input type="checkbox" id="check">
-    <div class="login form">
+    <div class="login form" id="login-form">
       <header>Login</header>
       <form action="#">
-        <input type="text" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
-        <a href="#">Forgot password?</a>
-        <input type="button" class="button" value="Login">
+        <input type="text" placeholder="Enter your username" id="login-username" required>
+        <input type="password" placeholder="Enter your password" id="login-password" required>
+        <input type="submit" class="loginbutton" value="Login">
       </form>
+      <script>
+        // Add an event listener to the login form
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+          // Prevent the default form submission
+          event.preventDefault();
+    
+          // Redirect to the index1.html page
+          window.location.href = "index1.html";
+        });
+      </script>
       <div class="signup">
         <span class="signup">Don't have an account?
          <label for="check">Signup</label>
@@ -27,11 +36,12 @@
     </div>
     <div class="registration form">
       <header>Signup</header>
-      <form action="#">
-        <input type="text" placeholder="Enter your email">
-        <input type="password" placeholder="Create a password">
-        <input type="password" placeholder="Confirm your password">
-        <input type="button" class="button" value="Signup">
+      <form id="signup-form">
+        <input type="email" placeholder="Enter your email" id="signup-email" required>
+        <input type="text" name="username" id="signup-username" placeholder="Enter username" required>
+        <input type="password" placeholder="Create a password" id="signup-password" required>
+        <input type="password" placeholder="Confirm your password" id="confirm-password" required>
+        <input type="submit" class="signupbutton" value="Signup">
       </form>
       <div class="signup">
         <span class="signup">Already have an account?
@@ -39,6 +49,22 @@
         </span>
       </div>
     </div>
+    <script>
+      // Add an event listener to the signup form
+      document.getElementById("signup-form").addEventListener("submit", function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+  
+        // Redirect to the index1.html page
+        window.location.href = "index1.html";
+      });
+  
+      // Add an event listener to the login link
+      document.getElementById("login-link").addEventListener("click", function() {
+        // Redirect to the login page
+        window.location.href = "login.html"; // Replace with the actual login page name
+      });
+    </script>
   </div>
 </body>
 </html>
