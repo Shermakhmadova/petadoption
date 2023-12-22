@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <title>Admin Profile</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+<style>
+      .admin-info {
+            color: #333;
+        }
+        
+        .admin-info p {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
 
+        .admin-details{
+            margin: 20px;
+        }
+        
+</style>
 <body>
     <header>
-        <div class="top-right" style="padding-left: 93%;">
+        <div class="top-right" style="padding-left: 85%;">
             <!-- Login/Sign up or User Profile icon -->
             <a href="login.html" class="custom-link" >Log Out</a>
+            <a href="index.html" class="home">Home</a>
         </div>
     </header>
     <nav>
@@ -26,7 +42,7 @@
     </nav>
 
     <main>
-        <section class="admin-profile" style="margin: 50px ;">
+        <section class="admin-profile" style="margin: 50px 30px 30px 50px ">
             <div class="admin-details">
                 <div class="profile-picture">
                     <!-- User profile picture -->
@@ -38,7 +54,64 @@
             </div>
             <!-- Rest of your content -->
         </section>
-        <h1 style="margin-left: 50px; color:#009579">Manage Pets</h1>
+        <button onclick="openAddPetModal()" style="margin-left: 50px" class="btn">Add New Pet</button>
+
+        <!-- The Modal -->
+        <div id="addPetModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddPetModal()">&times;</span>
+               
+                <form id="addPetForm">
+                    <h2 style="margin:6px">Add New Pet</h2>
+                    <label for="petName">Pet Name:</label>
+                    <input type="text" id="petName" name="petName" required>
+        
+                    <label for="petType">Pet Type:</label>
+                    <input type="text" id="petType" name="petType" required>
+        
+                    <label for="petAge">Pet Age:</label>
+                    <input type="number" id="petAge" name="petAge" required>
+
+                    <label for="petAge">Gender:</label>
+                    <input type="number" id="petGender" name="petGender" required>
+
+                    <label for="petCost">Cost:</label>
+                    <input type="text" name="petCost" id="petCost">
+        
+                    <label for="petDescription">Pet Description:</label>
+                    <textarea id="petDescription" name="petDescription" required></textarea>
+        
+                    <button type="button" onclick="submitForm()">Add Pet</button>
+                </form>
+            </div>
+        </div>
+    
+        <button id="addUserButton" onclick="openAddUserModal()" style="margin-left: 50px" class="btn">Add User</button>
+
+        <div id="addUserModal" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeAddUserModal()">&times;</span>
+          <form id="addUserForm">
+            <h2 style="margin:6px">Add User</h2>
+           <label for="userName">User Name:</label>
+            <input type="text" id="userName" placeholder="User Name" required>
+
+            <label for="userEmail">User Email:</label>
+            <input type="email" id="userEmail" placeholder="User Email" required>
+
+            <label for="userAge">User Age:</label>
+            <input type="number" id="userAge" placeholder="User Age" required>
+
+            <label for="userDescription">User Description:</label>
+            <textarea id="userDescription" placeholder="User Description" required></textarea>
+
+            <button type="submit" onsubmit="submitUserForm()">Submit</button>
+          </form>
+        </div>
+    </div>
+
+       
+        <h1 style="margin-left: 50px; margin-top: 50px; color:#009579">Manage Pets</h1>
         <div class="pet-categories">
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px">
@@ -46,6 +119,10 @@
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
                 <p>Status: Adopted</p>
+                <div class="icons" style="margin-left: 70%;">
+                <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                <img class="delete" src="img/delete.png" alt="delete" height="30px">
+            </div>
             </div>
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px">
@@ -53,6 +130,10 @@
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
                 <p>Status: Adopted</p>
+                <div class="icons" style="margin-left: 70%;">
+                    <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                    <img class="delete" src="img/delete.png" alt="delete" height="30px">
+                </div>
             </div>
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px">
@@ -60,6 +141,10 @@
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
                 <p>Status: Available</p>
+                <div class="icons" style="margin-left: 70%;">
+                    <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                    <img class="delete" src="img/delete.png" alt="delete" height="30px">
+                </div>
             </div>
             <div class="category">
                 <img src="img/dog.jpg" alt="Dog" height="180px">
@@ -67,6 +152,10 @@
                 <p>Age: 2 years | Gender: Male | Friendly</p>
                 <a href="details.html" class="custom-link">View Details</a>
                 <p>Status: Available</p>
+                <div class="icons" style="margin-left: 70%;">
+                    <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                    <img class="delete" src="img/delete.png" alt="delete" height="30px">
+                </div>
             </div>
         </div>
         <h1 style="margin-left: 50px; color:#009579">Manage Users</h1>
@@ -81,6 +170,10 @@
                   <p>Name: John Doe</p>
                   <p>Email: johndoe@example.com</p>
                   <p>Phone: 123-456-7890</p>
+                  <div class="icons" style="margin-left: 70%;">
+                    <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                    <img class="delete" src="img/delete.png" alt="delete" height="30px">
+                </div>
                   <!-- Add more user details as needed -->
               </div>
           </div>
@@ -94,6 +187,10 @@
                 <p>Name: John Doe</p>
                 <p>Email: johndoe@example.com</p>
                 <p>Phone: 123-456-7890</p>
+                <div class="icons" style="margin-left: 70%;">
+                    <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                    <img class="delete" src="img/delete.png" alt="delete" height="30px">
+                </div>
                 <!-- Add more user details as needed -->
             </div>
           </div>
@@ -107,6 +204,10 @@
               <p>Name: John Doe</p>
               <p>Email: johndoe@example.com</p>
               <p>Phone: 123-456-7890</p>
+              <div class="icons" style="margin-left: 70%;">
+                <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                <img class="delete" src="img/delete.png" alt="delete" height="30px">
+            </div>
               <!-- Add more user details as needed -->
           </div>
       </div>
@@ -120,21 +221,20 @@
             <p>Name: John Doe</p>
             <p>Email: johndoe@example.com</p>
             <p>Phone: 123-456-7890</p>
-            <!-- Add more user details as needed -->
+            <div class="icons" style="margin-left: 70%;">
+                <img class="edit" src="img/edit.png" alt="edit" height="30px">
+                <img class="delete" src="img/delete.png" alt="delete" height="30px">
+            </div>
+           
         </div>
     </div>
-          <!-- Rest of your content -->
+       
         </div>
-    </main>
 
+    </main>
     <footer>
-        <div class="footer-menu">
-            <a href="contacts.html">Contacts</a>
-            <a href="address.html">Address</a>
-            <span>Phone: 123-456-7890</span>
-        </div>
         <div class="disclaimer">
-            <p>All rights reserved</p>
+            <p>&copy All rights reserved</p>
         </div>
     </footer>
 </body>
