@@ -54,6 +54,7 @@
             background-color: #009579;
             color: #fff;
             border: none;
+            margin-top: 15px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -63,10 +64,6 @@
             background-color: #006653;
         }
         
-        /* Footer */
-        footer {
-            /* Styles for footer */
-        }
         </style>
 </head>
 
@@ -78,18 +75,14 @@
         </div>
         <div class="top-right">
             <!-- Login/Sign up or User Profile icon -->
-            <a href="login.html" class="custom-link">Log In / Sign Up</a>
+            <a href="index.html" class="home">Home</a>
         </div>
     </header>
 
     <nav>
         <div class="logo">
             <!-- PetHouse logo/title -->
-            <h1><a href="index.html" style="text-decoration: none; color:#009579;">Welcome to PetHouse!</a></h1>
-        </div>
-        <div class="search-bar">
-            <!-- Search bar -->
-            <input type="text" placeholder="Search for pets...">
+            <h1><a href="index.html" style="text-decoration: none; color:#009579;">PET HOUSE</a></h1>
         </div>
     </nav>
 
@@ -98,26 +91,35 @@
             <div class="pet-image">
                 <img src="img/dog.jpg" alt="Pet Name">
             </div>
-            <div class="pet-info">
+            <div class="pet-info" id="petInfo">
                 <h1>Pet Name</h1>
-                <p>Breed: Breed Type</p>
-                <p>Age: Age</p>
-                <p>Gender: Gender</p>
-                <p>Temperament: Temperament Description</p>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <button>Adopt Me</button>
+                <p>Breed: Scottish Gundog</p>
+                <p>Age: 1 year old</p>
+                <p>Gender: Male</p>
+                <p>Temperament: Calm, friendly</p>
+                <p>Description: A little buddy with loving heart</p>
+                <p>Status: Available</p>
+                <p>Cost: 50$</p>
+                <p><a href="report.html" class="custom-link" style="margin-top: 10px; color: #006653; font-weight: bold;">View Medical Reports</a></p>
+                <button onclick="redirectToTransactionPage()">Adopt Me</button>
             </div>
+            <script>
+                function redirectToTransactionPage() {
+                    const petName = document.querySelector(".pet-info h1").innerText;
+                    const breed = document.querySelector(".pet-info p:nth-of-type(2)").innerText;
+
+                    const petInfo = `Name: ${petName}\nBreed: ${breed}`;
+                    const encodedPetInfo = encodeURIComponent(petInfo);
+
+                    window.location.href = `transaction.html?pet=${encodedPetInfo}`;
+                }
+            </script>
         </section>
     </main>
 
     <footer>
-        <div class="footer-menu">
-            <a href="contacts.html">Contacts</a>
-            <a href="address.html">Address</a>
-            <span>Phone: 123-456-7890</span>
-        </div>
         <div class="disclaimer">
-            <p>All rights reserved</p>
+            <p>&copy All rights reserved</p>
         </div>
     </footer>
 </body>
